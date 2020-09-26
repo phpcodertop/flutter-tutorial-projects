@@ -11,6 +11,7 @@ class Product with ChangeNotifier {
   final String imageUrl;
   bool isFavorite;
 
+
   Product({
     @required this.id,
     @required this.title,
@@ -25,11 +26,11 @@ class Product with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> toggleFavoriteStatus() async {
+  Future<void> toggleFavoriteStatus(String token) async {
     final oldStatus = isFavorite;
     isFavorite = !isFavorite;
     notifyListeners();
-    final url = 'https://flutter-update.firebaseio.com/products/$id.json';
+    final url = 'https://myshop-5cd0a.firebaseio.com/products/$id.json?auth=$token';
     try {
       final response = await http.patch(
         url,
