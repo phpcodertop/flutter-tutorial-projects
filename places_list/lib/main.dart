@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         home: PlacesListScreen(),
         routes: {
           AddPlaceScreen.routeName : (ctx) => AddPlaceScreen(),
+          PlacesDetailsScreen.routeName : (ctx) => PlacesDetailsScreen(),
         },
       ),
     );

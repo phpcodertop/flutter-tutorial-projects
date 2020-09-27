@@ -4,6 +4,8 @@
         android:requestLegacyExternalStorage="true"
         android:label="places_list"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyC4THkyCBEq_6qcex5ofWMEmCxoYKVajb0"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
